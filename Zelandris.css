@@ -3,11 +3,21 @@ body {
     height: 1632px;
   }
 
-  #wiki-content {
-    height: 85%;
-    margin: auto;
-    margin-top: 5%;
-    width: 80%;
-    background-color: #163f4a;
-    border-radius: 25px;
-  }
+#myNavbarSpace {
+    padding-top: 25px;
+}
+
+#wiki-content {
+height: 85%;
+margin: auto;
+margin-top: 5%;
+width: 80%;
+background-color: #163f4a;
+border-radius: 25px;
+}
+
+ul > li {
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 2px;
+}
