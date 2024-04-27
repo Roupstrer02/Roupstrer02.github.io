@@ -15,6 +15,7 @@ body {
 #myNavbarSpace > div {
     border-radius: 25px;
     background-color: #163f4a;
+    color: white;
 }
 
 #HomeIcon {
@@ -22,11 +23,10 @@ body {
     height: auto;
 }
 
-ul > li {
+#myNavbarSpace ul > li:hover {
     background-color: lightblue;
-    border-radius: 10px;
-    margin: 2px;
     color: black;
+    border-radius: 10px;
 }
 
 /* Wiki content block */
@@ -39,8 +39,6 @@ background-color: #163f4a;
 border-radius: 25px;
 color: white;
 }
-
-
 
 #wiki-content > h1 {
     font-size: 75px;
@@ -62,4 +60,19 @@ color: white;
     font-family:"Kaushan Script", cursive;
     font-weight: 800;
     margin-top: 10px;
+}
+
+#wiki-content-left {
+    padding: 10px;
+}
+
+#wiki-content-right {
+    padding: 10px;
+}
+
+#text-content {
+    border: solid;
+    border-radius: 25px;
+    margin: 50px;
+    
 }
