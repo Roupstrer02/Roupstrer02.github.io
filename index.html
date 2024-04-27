@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <title>Welcome to Zelandris</title>
         <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="Zelandris.css">
+
     </head>
+
     <body>
         <div class="navbar bg-base-300 rounded-box">
             <div class="flex-1 px-2 lg:flex-none">
-              <a class="text-lg font-bold">User Manual Index</a>
+              <a class="text-lg font-bold">Wiki Index</a>
             </div> 
             <div class="flex justify-end flex-1 px-2">
               <div class="flex items-stretch">
                 <div class="dropdown dropdown-end">
-                  <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Dropdown</div>
-                  
+                  <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Categories</div>
+                
                   <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                    <li><a href="#Everything_about_You">Everything about You</a></li> 
+                    <li><a href="">Welcome to Zelandris</a></li> 
+                    <li><a href="#Everything_about_You">Everything about You</a></li>
+                    <li><a href="#Everything_about_You">Equipment</a></li>
+                    <li><a href="#Everything_about_You">Spellcasting and Magic</a></li>
+                    <li><a href="#Everything_about_You">Being an Artisan</a></li>
+                    <li><a href="#Everything_about_You">The Elite of Zelandris</a></li>
+
                     <li><a>Item 2</a></li>
                   </ul>
+
                 </div>
               </div>
             </div>
         </div>
 
-        <div class="flex flex-col w-full">
-        <div class="divider"></div> 
+        <div id="wiki-content">
+          <!-- Content for page goes here -->
+
         </div>
 
         <a id="Everything_about_You"></a>
+
         
-        <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content text-center">
-                <div class="max-w-md">
-                    <h1 class="text-5xl font-bold">Hello there</h1>
-                    <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    <button class="btn btn-primary">Get Started</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="divider"></div> 
-
-        <img src="ProfileMenuScreen.png" alt="Profile Menu Screen">
+        
 
     </body>
 </html>

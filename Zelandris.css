@@ -1,0 +1,13 @@
+body {
+    background-image: url(background.png);
+    height: 1632px;
+  }
+
+  #wiki-content {
+    height: 85%;
+    margin: auto;
+    margin-top: 5%;
+    width: 80%;
+    background-color: #163f4a;
+    border-radius: 25px;
+  }
