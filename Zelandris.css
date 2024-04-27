@@ -62,11 +62,11 @@ color: white;
     margin-top: 10px;
 }
 
-#wiki-content-left {
+#wiki-content-left > *{
     padding: 10px;
 }
 
-#wiki-content-right {
+#wiki-content-right > * {
     padding: 10px;
 }
 
