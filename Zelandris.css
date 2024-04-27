@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&display=swap');
 
+/* ======================================================================================================================================================================== */
+/* Background Image */
 body {
     background-image: url(Assets/background.png);
     height: 1632px;
@@ -28,7 +30,7 @@ body {
     color: black;
     border-radius: 10px;
 }
-
+/* ======================================================================================================================================================================== */
 /* Wiki content block */
 #wiki-content {
 height: 85%;
@@ -62,17 +64,27 @@ color: white;
     margin-top: 10px;
 }
 
-#wiki-content-left > *{
-    padding: 10px;
+#wiki-content-left {
+    width: 100%;
 }
 
-#wiki-content-right > * {
+#wiki-content-right {
+    width: 100%;
+}
+
+#wiki-content-left #text-content {
     padding: 10px;
+    border: solid;
+}
+
+#wiki-content-right #text-content {
+    padding: 10px;
+    border: solid;
 }
 
 #text-content {
     border: solid;
     border-radius: 25px;
-    margin: 50px;
+    margin: 15px;
     
 }
