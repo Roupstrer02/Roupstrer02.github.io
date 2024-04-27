@@ -5,12 +5,21 @@ body {
     height: 1632px;
   }
 
+  /* Navbar */
 #myNavbarSpace {
     padding-top: 25px;
     padding-left: 5px;
     padding-right: 5px;
 }
 
+ul > li {
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 2px;
+    color: black;
+}
+
+/* Wiki content block */
 #wiki-content {
 height: 85%;
 margin: auto;
@@ -18,19 +27,21 @@ margin-top: 5%;
 width: 70%;
 background-color: #163f4a;
 border-radius: 25px;
-
+color: white;
 }
 
-ul > li {
-    background-color: lightblue;
-    border-radius: 10px;
-    margin: 2px;
-}
+
 
 #wiki-content > h1 {
     font-size: 75px;
-    color: white;
     text-align: center;
+    font-family:"Kaushan Script", cursive;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+#wiki-content > h2 {
+    font-size: 50px;
     font-family:"Kaushan Script", cursive;
     font-weight: 800;
     margin-top: 10px;
