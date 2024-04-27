@@ -1,23 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&display=swap');
+
 body {
-    background-image: url(background.png);
+    background-image: url(Assets/background.png);
     height: 1632px;
   }
 
 #myNavbarSpace {
     padding-top: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #wiki-content {
 height: 85%;
 margin: auto;
 margin-top: 5%;
-width: 80%;
+width: 70%;
 background-color: #163f4a;
 border-radius: 25px;
+
 }
 
 ul > li {
     background-color: lightblue;
     border-radius: 10px;
     margin: 2px;
+}
+
+#wiki-content > h1 {
+    font-size: 75px;
+    color: white;
+    text-align: center;
+    font-family:"Kaushan Script", cursive;
+    font-weight: 800;
+    margin-top: 10px;
 }
