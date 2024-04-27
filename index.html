@@ -12,41 +12,50 @@
 
     <body>
         <div id="myNavbarSpace">
-          <div class="navbar bg-base-300 rounded-box">
-            <div class="flex-1 px-2 lg:flex-none">
-              <a class="text-lg font-bold">Wiki Index</a>
-            </div> 
-            <div class="flex justify-end flex-1 px-2">
-              <div class="flex items-stretch">
-                <div class="dropdown dropdown-end">
-                  <div tabindex="0" role="button" class="btn btn-ghost rounded-btn">Categories</div>
-                
-                  <ul tabindex="0" class="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
-                    <li><a href="index.html">Welcome to Zelandris</a></li> 
-                    <li><a href="Everything_about_You.html">Everything about You</a></li>
-                    <li><a href="Equipment.html">Equipment</a></li>
-                    <li><a href="Spellcasting_and_Magic.html">Spellcasting and Magic</a></li>
-                    <li><a href="Being_an_Artisan.html">Being an Artisan</a></li>
-                    <li><a href="Elite_of_Zelandris.html">The Elite of Zelandris</a></li>
-                  </ul>
-  
+          <div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
               </div>
+              <a id="HomeIcon" class="btn btn-ghost text-xl" href="index.html">
+                <img src="Assets/HomeIcon.png" alt="Zelandris Logo">
+              </a>
             </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a class="btn btn-ghost text-xl" href="index.html">Home</a></li>
+                <li><a class="btn btn-ghost text-xl" href="Everything_about_You.html">Everything about You</a></li>
+                <li><a class="btn btn-ghost text-xl" href="Equipment.html">Equipment</a></li>
+                <li><a class="btn btn-ghost text-xl" href="Spellcasting_and_Magic.html">Spellcasting and Magic</a></li>
+                <li><a class="btn btn-ghost text-xl" href="Being_an_Artisan.html">Being an Artisan</a></li>
+                <li><a class="btn btn-ghost text-xl" href="Elite_of_Zelandris.html">The Elite of Zelandris</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+            </div>
+          </div>
         </div>
-        </div>
-
 
         <div id="wiki-content">
           <!-- Content for page goes here -->
           <h1>Welcome to Zelandris</h1>
+          <p style="font-size: 25px;">
+            This wiki contains any and all information about the server and how it works.<br>
+            use the navbar at the top to navigate to different topics<br>
+            <br>
+            I hope you Enjoy your time on the server!
+          </p>
 
-          <h2>Lore of the World</h2>
+          <h2 style="margin-top: 50px;">Lore of the World</h2>
           <p>
             The world waged war over sources of primal magic: Creation, Order and Carnage. A group of three adventurers crossing the borders of nations set out to find the three primordial sources before the world’s superpowers could use it to bring ruin on one another. The adventurers gathered the sources from their resting places across the world: Creation, from the forests of Iliasing, Carnage, from the blazing deserts near Tu’Hra, and Order from the crystal cave of the eye of the storm. To keep the sources safe, each adventurer chose to fuse themselves with one of the sources, and disappear.
             Unbeknownst to them, the gathering of the three sources in one place caused the world to nearly crack open. This event was later named The Shattering.
           </p>
-          
+          <p>
+
+          </p>
         </div>
 
         <a id="Everything_about_You"></a>
