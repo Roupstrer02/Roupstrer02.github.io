@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 /* ======================================================================================================================================================================== */
 /* Background Image */
@@ -56,7 +57,7 @@ color: white;
     text-align: center;
 }
 
-#wiki-content > h2 {
+#wiki-content h2 {
     text-align: center;
     font-size: 50px;
     font-family:"Kaushan Script", cursive;
@@ -87,4 +88,31 @@ color: white;
     border-radius: 25px;
     margin: 15px;
     
+}
+
+/* Hover buttons for Stat formulas */
+
+#StatDisplayButtonContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#StatDisplayButtonContainer div{
+    border-radius: 50px;
+    width: 20%;
+    margin: 5px;
+    text-align: center;
+    color: black;
+}
+
+#StatDisplayButtonContainer > div:hover {
+    color: white;
+}
+
+#FormulaDisplayer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
 }

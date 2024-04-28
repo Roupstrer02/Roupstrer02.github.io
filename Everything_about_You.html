@@ -5,6 +5,7 @@
         <title>Everything about You</title>
         <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <script src="Zelandris.js"></script>
         <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
         <link rel="stylesheet" href="Zelandris.css">
 
@@ -44,30 +45,76 @@
           <!-- Content for page goes here -->
           <h1>Everything about You</h1>
 
-          <h2 style="margin-top: 50px;">Your Skills</h2>
+          
 
             <div style="display: flex;">
                
                 <div id="wiki-content-left">
+                    <h2 style="margin-top: 50px;">Your Skills</h2>
                     <div id="text-content">
-                        <p> Your character's abilities are split into 7 stats: </p>
+                        <p> Your character's abilities are split into 7 skills: </p>
                         <p>
                             <ul>
                                 <li> <label style="color:#d12b2b">Vitality</label>: Represents your health and general constitution</li>
                                 <li> <label style="color:#19bd19">Resilience</label>: Represents your ability to resist incoming damage</li>
-                                <li> <label style="color:#db6619">Strength</label>: Represents how hard you hit enemies, swing a sword, fire a bow</li>
+                                <li> <label style="color:#db6619">Strength</label>: Represents how hard you hit enemies, swing a sword, or fire a bow</li>
                                 <li> <label style="color:#f3ef20">Dexterity</label>: Represents your agility, speed, and affinity for quick strikes</li>
                                 <li> <label style="color:#1b87cf">Intelligence</label>: Represents your affinity for connecting with the magic in the world</li>
                                 <li> <label style="color:#41a5d3">Wisdom</label>: Represents the potency of the magic you posess</li>
                                 <li> <label style="color:#e235cb">Artisan</label>: Represents your ability to create things, let it be cooking, crafting or smithing</li>
+                                <div class="divider divider-accent"></div> 
+                                <li>
+                                    <p>
+                                        Defeating the monsters roaming around Zelandris will grant you experience points which contribute towards leveling up your character.<br>
+                                        Each level you gain grants you an additional skill point to add to 1 of your 7 skills.
+                                    </p>
+                                </li>
                             </ul>
                         </p>
                     </div>
+                    
+                    <h2>Skill Improvement Menu</h2>
+                        <img style="margin-left: 10%; max-width: 80%; height: auto;" src="Assets/StatImprovementMenu.png" alt="Stat Improvment Menu">
+                    
+                    <div id="text-content">
+                        <div class="divider divider-accent"></div> 
+                        <p style="text-align: center;"> Hover a skill to see its effect (subject to change) </p>
+                        
+                        <ul>
+                            <li id="StatDisplayButtonContainer">
+                                <div id="VitalityFormulaDisplayer" class="btn btn-ghost text-xl" style="background-color:#d12b2b;" onclick="hoverStatDisplayer(1)">Vitality</div>
+                                <div id="ResilienceFormulaDisplayer" class="btn btn-ghost text-xl" style="background-color:#19bd19;" onclick="hoverStatDisplayer(2)">Resilience</div>
+                                <div id="StrengthFormulaDisplayer" class="btn btn-ghost text-xl" style="background-color:#db6619;" onclick="hoverStatDisplayer(3)">Strength</div>
+                                <div id="DexterityFormulaDisplayer" class="btn btn-ghost text-xl" style="background-color:#f3ef20;" onclick="hoverStatDisplayer(4)">Dexterity</div>
+                            </li>
+                            <li id="StatDisplayButtonContainer">
+                                <div id="IntelligenceFormulaDisplayer" class="btn btn-ghost text-xl" style="background-color:#1b87cf;" onclick="hoverStatDisplayer(5)">Intelligence</div>
+                                <div id="WisdomFormulaDisplayer" class="btn btn-ghost text-xl" style="background-color:#41a5d3;" onclick="hoverStatDisplayer(6)">Wisdom</div>
+                                <div id="ArtisanFormulaDisplayer" class="btn btn-ghost text-xl" style="background-color:#e235cb;" onclick="hoverStatDisplayer(7)">Artisan</div>
+                            </li>
+                        </ul>
+
+                        <p id="FormulaDisplayer">test</p>
+
+                        <!-- <ul style="font-size: 15px;">
+                            <li> <label style="color:#d12b2b">Vitality</label>: Max health = 100 + 5 * Vitality + Total_Equipment_Max_Health * (1 + Vitality/100) </li>
+                            <li> <label style="color:#19bd19">Resilience</label>: Defense = 5 * Resilience + Total_Equipment_Defense</li>
+                            <li> <label style="color:#db6619">Strength</label>: Damage = Strength + Total_Equipment_Damage * (Strength/100)</li>
+                            <li> <label style="color:#f3ef20">Dexterity</label>: MovementSpeed% = 100% + Dexterity/100 + Total_Equipment_MoveSpeed%</li>
+                            <li> <label style="color:#1b87cf">Intelligence</label>: Max Mana = 20 + (Intelligence - 1) * 8 + Total_Equipment_Max_Mana</li>
+                            <li> <label style="color:#41a5d3">Wisdom</label>: Base Spell Damage = Wisdom * (Wand_Offense_Affiniy% / 100)</li>
+                            <li> <label style="color:#e235cb">Artisan</label>: A certain level of Artisan is required for using new crafting recipes and stations</li>
+                        </ul> -->
+                    </div>
                 </div>
                 <div id="wiki-content-right">
+                    <h2 style="margin-top: 50px; font-family:  'DotGothic16', 'sans-serif';">"/Profile" Menu</h2>
                     <img style="max-width: 90%; height: auto; box-shadow: 3px 3px 5px 6px #222; margin: 20px; border: #111 solid;" src="Assets/ProfileMenuScreen.png" alt="Profile Menu Example">
                     <div id="text-content">
                         <h2>The Profile menu</h2>
+                        <p>
+                            You can open the profile menu by typing <b>/profile</b> in the chat
+                        </p>
                         <div class="divider divider-accent"></div> 
                         <p>
                             <ul>
@@ -76,7 +123,7 @@
                                 <div class="divider divider-accent"></div> 
                                 <li>* <label style="color:#15dde4">Diamond</label>:<br>The Level up menu, where you can spend your skill points</li><br>
                                 <li>* <label style="color:#e4ad15">Weather</label>:<br>Shows the weather of the biome you're in (see <a style="color: #ce352a;" href="Creatures_of_Zelandris.html"><i>Creatures of Zelandris</i></a>)</li><br>
-                                <li>* <label style="color:#ab1fe2">Amethyst Block</label>:<br>Menu for selecting what spells to have in your arsenal (see <a style="color: #ce352a;" href="Spellcasting_and_Magic.html"><i>Spellcasting and Magic</i></a>)</li><br>
+                                <li>* <label style="color:#ab1fe2">Amethyst Block</label>:<br>Menu for selecting what spells to have in your arsenal (see <a style="color: #bb2ace;" href="Spellcasting_and_Magic.html"><i>Spellcasting and Magic</i></a>)</li><br>
                                 <li>* <label style="color:#df7b41">Book</label>:<br>Menu for selecting what spells you want in your arsenal </li>
                             </ul>
                         </p>
