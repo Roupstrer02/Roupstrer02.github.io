@@ -3,10 +3,10 @@ function hoverStatDisplayer(buttonInList) {
 
     switch(buttonInList) {
         case 1:
-            formulaDisplayer.innerText = "Max health = 100 + 5 * Vitality + Total_Equipment_Max_Health * (1 + Vitality/100)";
+            formulaDisplayer.innerText = "Max health = 100 + 5 * (Vitality - 1) + Total_Equipment_Max_Health * (1 + Vitality/100)";
           break;
         case 2:
-            formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = (1 + Total_Equipment_HealthRegen) * Healing_Received%/100";
+            formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = (1 + Resilience/10 + Total_Equipment_HealthRegen) * Healing_Received%/100";
           break;
         case 3:
             formulaDisplayer.innerText = "Damage = Strength + Total_Equipment_Damage * (Strength/100)";
@@ -24,7 +24,7 @@ function hoverStatDisplayer(buttonInList) {
             formulaDisplayer.innerText = "A certain level of Artisan is required for using new crafting recipes and stations";
             break;
         default:
-          formulaDisplayer.innerText = "Undefined Button Behaviour";
+          formulaDisplayer.innerText = "Undefined Button Behaviour";    
       }
 
 }
