@@ -6,13 +6,13 @@ function hoverStatDisplayer(buttonInList) {
             formulaDisplayer.innerText = "Max health = 100 + 5 * Vitality + Total_Equipment_Max_Health * (1 + Vitality/100)";
           break;
         case 2:
-            formulaDisplayer.innerText = "Defense = 5 * Resilience + Total_Equipment_Defense";
+            formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = (1 + Total_Equipment_HealthRegen) * Healing_Received%/100";
           break;
         case 3:
             formulaDisplayer.innerText = "Damage = Strength + Total_Equipment_Damage * (Strength/100)";
         break;
         case 4:
-            formulaDisplayer.innerText = "MovementSpeed% = 100% + Dexterity/100 + Total_Equipment_MoveSpeed% \n MultiHit% = Dexterity/100 + Total_Equipment_MultiHit%";
+            formulaDisplayer.innerText = "MovementSpeed% = 100 + Dexterity/100 + Total_Equipment_MoveSpeed% \n MultiHit% = Dexterity/100 + Total_Equipment_MultiHit%";
             break;
         case 5:
             formulaDisplayer.innerText = "Max Mana = 20 + (Intelligence - 1) * 8 + Total_Equipment_Max_Mana";
