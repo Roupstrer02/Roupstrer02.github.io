@@ -3,7 +3,7 @@ function hoverStatDisplayer(buttonInList) {
 
     switch(buttonInList) {
         case 1:
-            formulaDisplayer.innerText = "Max health = 100 + 5 * (Vitality - 1) + Total_Equipment_Max_Health * (1 + Vitality/100)";
+            formulaDisplayer.innerText = "Max health = 100 + 25 * (Vitality - 1) + Total_Equipment_Max_Health * (1 + Vitality/100)";
             break;
         case 2:
             formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = (1 + (Resilience - 1)/5 + Total_Equipment_HealthRegen) * Healing_Received%/100";
