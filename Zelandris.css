@@ -43,18 +43,23 @@ border-radius: 25px;
 color: white;
 }
 
+
 #wiki-content > h1 {
     font-size: 75px;
     text-align: center;
     font-family:"Kaushan Script", cursive;
     font-weight: 800;
-    margin-top: 10px;
+    margin-top: 0.5%;
 }
 
 #wiki-content > p {
     width: 80%;
     margin: auto;
     text-align: center;
+}
+
+#wiki-content ul > li {
+    margin-bottom: 10px;
 }
 
 #wiki-content h2 {
@@ -66,16 +71,17 @@ color: white;
 }
 
 #wiki-content-left {
-    width: 100%;
+    width: 50%;
 }
 
 #wiki-content-right {
-    width: 100%;
+    width: 50%;
 }
 
 #wiki-content-left #text-content {
-    padding: 10px;
+    padding: 1%;
     border: solid;
+    
 }
 
 #wiki-content-right #text-content {
@@ -99,10 +105,11 @@ color: white;
 }
 
 #StatDisplayButtonContainer div{
-    border-radius: 50px;
+    border-radius: 35%;
     width: 20%;
-    margin: 5px;
+    margin: 0.5%;
     text-align: center;
+    font-size: 80%;
     color: black;
 }
 
@@ -113,6 +120,10 @@ color: white;
 #FormulaDisplayer {
     background-color: black;
     color: white;
-    padding: 10px;
+    padding: 2%;
+    font-size: 70%;
     border-radius: 25px;
+    width: 90%;
+    margin: auto;
+        
 }
