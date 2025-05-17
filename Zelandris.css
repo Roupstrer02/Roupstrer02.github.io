@@ -2,11 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 /* ======================================================================================================================================================================== */
+
+
 /* Background Image */
-body {
-    background-image: url(Assets/background.png);
-    height: 1632px;
-  }
+#backgroundimage {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
   /* Navbar */
 #myNavbarSpace {
@@ -34,13 +38,15 @@ body {
 /* ======================================================================================================================================================================== */
 /* Wiki content block */
 #wiki-content {
-height: 85%;
+height: auto;
 margin: auto;
 margin-top: 5%;
 width: 70%;
 background-color: #163f4a;
 border-radius: 25px;
 color: white;
+opacity: 93%;
+padding: 0.5%;
 }
 
 
