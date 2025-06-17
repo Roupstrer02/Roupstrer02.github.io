@@ -51,11 +51,12 @@
                 <div id="text-content">
                   <p>
                     <ul > 
-                      <p>Equipment can have 12 different stat improvements that kick in when the item is being used:</p>
+                      <p style="text-align: center;">Equipment can have some of 12 different stat improvements that kick in when it is being used:</p>
+                      <div class="divider divider-accent"></div> 
                       <li> <label style="color:#e60f0f"><b>Max Health</b></label>: Increases your total max health</li>
                       <li> <label style="color:#e46969"><b>Health/s</b></label>: Increases your health gained over time</li>
                       <li> <label style="color:#46cc42"><b>Defense</b></label>: Increases your resistance to damage</li>
-                      <li> <label style="color:#d14c2b"><b>Damage</b></label>: The Increase to your basic attack's damage</li>
+                      <li> <label style="color:#d14c2b"><b>Damage</b></label>: Increases your basic attack's damage</li>
                       <li> <label style="color:#cc2bd1"><b>Crit Chance%</b></label>: Increases the %chance for your hit to deal more damage according to your critical strike damage%</li>
                       <li> <label style="color:#832b7c"><b>Crit Damage%</b></label>: Increases How much damage a weapon deals when it critically strikes</li>
                       <li> <label style="color:#313cd4"><b>Max Mana</b></label>: Increases your total max mana</li>
@@ -68,50 +69,172 @@
                     </p>
                 </div>
                 
-                <h2>Equipment types</h2>
-                    <img style="margin-left: 10%; max-width: 80%; height: auto;" src="Assets/StatImprovementMenu.png" alt="Stat Improvment Menu">
+                <h2>Weapon types</h2>
                 
                 <div id="text-content"> 
                   <p style="text-align: center;">
                       There are <b>6</b> types of standard weapons types found around Zelandris:
                   </p>
-                  <div class="divider divider-accent"></div> 
+                  <div class="divider divider-accent"></div>
                   Melee:<br>
                   <ul>
-                    <li>- Dagger | <label style="color: yellow"><b>3 Stamina</b></label> | <label style="color: #d14c2b">1x Damage per item level</label></li>
-                    <li>- Long Sword | <label style="color: yellow"><b>5 Stamina</b></label> | <label style="color: #d14c2b">1.5x Damage per item level</label></li>
-                    <li>- Great Sword | <label style="color: yellow"><b>14 Stamina</b></label> | <label style="color: #d14c2b">2.5x Damage per item level</label></li>
+                    <li>
+                      <div class="collapse bg-base-100 border-base-300 border">
+                        <input type="checkbox" />
+                        <div class="collapse-title font-semibold">Dagger | </label><label style="color: yellow"><b>4 Stamina</b></label> | <label style="color: #d14c2b"><sup>2</sup>&frasl;<sub>3</sub>x damage scaling*</label></div>
+                        <div class="collapse-content text-sm">
+                          <img src="Assets/Dagger.png" alt="Model of a dagger">
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapse bg-base-100 border-base-300 border">
+                        <input type="checkbox" />
+                        <div class="collapse-title font-semibold">Long Sword | <label style="color: yellow"><b>6 Stamina</b></label> | <label style="color: #d14c2b">1.0x damage scaling*</label></div>
+                        <div class="collapse-content text-sm">
+                        <img src="Assets/Longsword.png" alt="Model of a longsword">
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapse bg-base-100 border-base-300 border">
+                        <input type="checkbox" />
+                        <div class="collapse-title font-semibold">Great Sword | <label style="color: yellow"><b>15 Stamina</b></label> | <label style="color: #d14c2b"><sup>5</sup>&frasl;<sub>2</sub>x damage scaling*</label></div>
+                        <div class="collapse-content text-sm">
+                        <img src="Assets/Greatsword.png" alt="Model of a greatsword">
+                        </div>
+                      </div>
+                    </li>
                   </ul>
                   
                   Ranged:<br>
                   <ul>
-                    <li>- Short Bow</li>
-                    <li>- Long Bow</li>
-                    <li>- Crossbow</li>
+                    <li>
+                      <div class="collapse bg-base-100 border-base-300 border">
+                        <input type="checkbox" />
+                        <div class="collapse-title font-semibold">Short Bow | <label style="color: yellow"><b>7 Stamina</b></label> | <label style="color: #d14c2b"><sup>7</sup>&frasl;<sub>6</sub>x damage scaling*</label></div>
+                        <div class="collapse-content text-sm">
+                        <img src="Assets/Shortbow.png" alt="Model of a shortbow">
+                        </div>
+                      </div>                      
+                    </li>
+                    <li>
+                      <div class="collapse bg-base-100 border-base-300 border">
+                        <input type="checkbox" />
+                        <div class="collapse-title font-semibold">Long Bow | <label style="color: yellow"><b>12 Stamina</b></label> | <label style="color: #d14c2b">2.0x damage scaling*</label></div>
+                        <div class="collapse-content text-sm">
+                        <img src="Assets/Longbow.png" alt="Model of a longbow">
+                        </div>
+                      </div>  
+                    </li>
+                    <li>
+                      <div class="collapse bg-base-100 border-base-300 border">
+                        <input type="checkbox" />
+                        <div class="collapse-title font-semibold">Crossbow | <label style="color: yellow"><b>8 Stamina</b></label> | <label style="color: #d14c2b"><sup>4</sup>&frasl;<sub>3</sub>x damage scaling*</label></div>
+                        <div class="collapse-content text-sm">
+                        <img src="Assets/Crossbow.png" alt="Model of a crossbow">
+                        </div>
+                      </div>
+                    </li>
                   </ul>
-
+                  <label style="color: #d14c2b"><b>* damage scaling</b></label>: relative damage compared to other weapons types of equal level
                 </div>
             </div>
             <div id="wiki-content-right">
-                <h2>Combat Styles</h2>
-                <img style="max-width: 90%; height: auto; box-shadow: 3px 3px 5px 6px #222; margin: 2%; border: #111 solid;" src="Assets/ProfileMenuScreen.png" alt="Profile Menu Example">
-                <div id="text-content">
+              <h2>Armour types</h2>
+          
+              <div id="text-content"> 
+                <p style="text-align: center;">
+                    There are <b>5</b> types of standard armor options found around Zelandris:
+                </p>
+                <div class="divider divider-accent"></div> 
+                Worn:<br>
+                <ul>
+                  <li>
+                    <div class="collapse bg-base-100 border-base-300 border">
+                      <input type="checkbox" />
+                      <div class="collapse-title font-semibold">Helmet | <label style="color: #46cc42"><sup>4</sup>&frasl;<sub>5</sub>x defense scaling</label></div>
+                      <div class="collapse-content text-sm">
+                      <img src="Assets/Helmet.png" alt="Model of a helmet">
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapse bg-base-100 border-base-300 border">
+                      <input type="checkbox" />
+                      <div class="collapse-title font-semibold">Chestplate | <label style="color: #46cc42"><sup>7</sup>&frasl;<sub>5</sub>x defense scaling</label></div>
+                      <div class="collapse-content text-sm">
+                      <img src="Assets/Chestplate.png" alt="Model of a chestplate">
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapse bg-base-100 border-base-300 border">
+                      <input type="checkbox" />
+                      <div class="collapse-title font-semibold">Leggings | <label style="color: #46cc42">1.0x defense scaling</label></div>
+                      <div class="collapse-content text-sm">
+                      <img src="Assets/Leggings.png" alt="Model of leggings">
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapse bg-base-100 border-base-300 border">
+                      <input type="checkbox" />
+                      <div class="collapse-title font-semibold">Boots | <label style="color: #46cc42"><sup>4</sup>&frasl;<sub>5</sub>x defense scaling</label></div>
+                      <div class="collapse-content text-sm">
+                      <img src="Assets/Boots.png" alt="Model of boots">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                
+                Held:<br>
+                <ul>
+                  <li>
+                    <div class="collapse bg-base-100 border-base-300 border">
+                      <input type="checkbox" />
+                      <div class="collapse-title font-semibold">
+                        Shield* | <label style="color: #46cc42">1.0x defense scaling</label><br>
+                        <i>* Shields no longer block projectiles like in vanilla Minecraft, blocking now increases your total defense by (shield level)%</i>
+                      </div>
+                      <div class="collapse-content text-sm">
+                      <img src="Assets/Shield.png" alt="Model of a shield">
+                      </div>
+                    </div>
+                    <br>
+                  
+                  </li>
+                </ul>
+              <label style="color: #46cc42"><b>* defense scaling</b></label>: relative defense compared to other armour types of equal level
+              </div>
+              <h2>Combat styles</h2>
+              <div id="text-content"> 
+                <p style="text-align: center;">
+                    Certain weapons are much more effective when wielded properly in its own combat style.<br>
+                    Using a greatsword in each hand never worked for anyone... 
+                </p>
+                <div class="divider divider-accent"></div>
+                <ul>
+                  <li><h3>Rogue</h3>
                     <p>
-                        You can open the profile menu by typing <b>/profile</b> in the chat
+                      <i>A rogue carries two daggers, one in each hand. In doing so, they can best utilize the attributes of both weapons at the same time,
+                      instead of being limited to their main hand.</i><br><br>
+                      Effect: <b> Damage of attacks considers 75% of the damage of <u>both</u> daggers instead of only considering the main hand weapon and applies the substats of both daggers</b>
                     </p>
-                    <div class="divider divider-accent"></div> 
+                  </li>
+                  <li><h3>Knight</h3>
                     <p>
-                        <ul>
-                            <li>* The gray glass plane shows your level and your progress towards the next level</li>
-                            <li>* Each of the other colored glass panes display the stat of the same color as the list on the left</li>
-                            <div class="divider divider-accent"></div> 
-                            <li>* <label style="color:#15dde4">Diamond</label>:<br>The Level up menu, where you can spend your skill points</li><br>
-                            <li>* <label style="color:#e4ad15">Weather</label>:<br>Shows the weather of the biome you're in (see <a style="color: #ce352a;" href="Creatures_of_Zelandris.html"><i>Creatures of Zelandris</i></a>)</li><br>
-                            <li>* <label style="color:#ab1fe2">Amethyst Block</label>:<br>Menu for selecting what spells to have in your arsenal (see <a style="color: #bb2ace;" href="Spellcasting_and_Magic.html"><i>Spellcasting and Magic</i></a>)</li><br>
-                            <li>* <label style="color:#df7b41">Book</label>:<br>Sends a link to the very wiki you're reading </li>
-                        </ul>
+                      <i>A knight carries both a longsword and a shield. In doing so, they can focus on both offense and defense simultaneously.</i><br><br>
+                      Effect: <b>Longsword deals 25% more damage | Shield Defense increases by 10%</b> 
+                    </p></li>
+                  <li><h3>Slayer</h3>
+                    <p>
+                      <i>A slayer wields a singular greatsword with both hands (off-hand empty). As such, the mighty weapon is easier to swing and can deal more devastating blows </i><br><br>
+                      Effect: <b>Greatsword deals 50% more damage</b>
                     </p>
-                </div>
+                  </li>
+                </ul>
+              </div>
             </div>
         </div>
 
