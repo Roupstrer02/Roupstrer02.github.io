@@ -3,22 +3,22 @@ function hoverStatDisplayer(buttonInList) {
 
     switch(buttonInList) {
         case 1:
-            formulaDisplayer.innerText = "Max health = 100 + 25 * (Vitality - 1) + Total_Equipment_Max_Health * (1 + Vitality/100)";
+            formulaDisplayer.innerText = "Max health = 20 + (equipment_getMaxHealth * (1 + (0.01 * Vitality))) + (Vitality - 1) * 25";
             break;
         case 2:
-            formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = (1 + (Resilience - 1)/5 + Total_Equipment_HealthRegen) * Healing_Received%/100";
+            formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = 4 * (0.25 + ((Resilience - 1) * 0.05) + equipment_HealthRegen) * Healing_Received%/100";
             break;
         case 3:
-            formulaDisplayer.innerText = "Damage = Strength + Total_Equipment_Damage * (Strength/100)";
+            formulaDisplayer.innerText = "Damage = Strength + Total_Equipment_Damage * (Strength/100)\n* if unarmed: Damage = 1";
             break;
         case 4:
-            formulaDisplayer.innerText = "MovementSpeed% = 100 + Dexterity/100 + Total_Equipment_MoveSpeed% \n MultiHit% = Dexterity/100 + Total_Equipment_MultiHit%";
+            formulaDisplayer.innerText = "MovementSpeed% = 100 + Dexterity + Total_Equipment_MoveSpeed% \n MultiHit% = Dexterity + Total_Equipment_MultiHit%";
             break;
         case 5:
             formulaDisplayer.innerText = "Max Mana = 20 + (Intelligence - 1) * 8 + Total_Equipment_Max_Mana";
             break;
         case 6:
-            formulaDisplayer.innerText = "Base Spell Damage = Wisdom * (Wand_Offense_Affiniy% / 100)";
+            formulaDisplayer.innerText = "Base Spell Damage = 2^((Wisdom/5) * 1.25)";
             break;
         case 7:
             formulaDisplayer.innerText = "A certain level of Artisan is required for using new crafting recipes and stations";

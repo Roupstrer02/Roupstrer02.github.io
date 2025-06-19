@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
     <head>
 
         <title>Spellcasting and Magic</title>
@@ -31,8 +31,8 @@
                   <li><a class="btn btn-ghost text-xl" href="Equipment.html">Equipment</a></li>
                   <li><a class="btn btn-ghost text-xl" href="Spellcasting_and_Magic.html">Spellcasting and Magic</a></li>
                   <li><a class="btn btn-ghost text-xl" href="Being_an_Artisan.html">Being an Artisan</a></li>
-                  <li><a class="btn btn-ghost text-xl" href="Elite_of_Zelandris.html">The Elite of Zelandris</a></li>
                   <li><a class="btn btn-ghost text-xl" href="Creatures_of_Zelandris.html">Creatures of Zelandris</a></li>
+                  <li><a class="btn btn-ghost text-xl" href="Elite_of_Zelandris.html">The Elite of Zelandris</a></li>
                 </ul>
               </div>
               <div class="navbar-end">
@@ -41,7 +41,7 @@
           </div>
 
 
-        <div id="wiki-content">
+        <div id="wiki-content" style="text-align: center;">
           <!-- Content for page goes here -->
           <h1>Spellcasting and Magic</h1>
           <div style="display: flex;">
@@ -77,9 +77,36 @@
                 
                 <h2>Spell Selection Menu</h2>
 
-                <img style="margin-left: 10%; max-width: 80%; height: auto;" src="Assets/SpellMenu.png" alt="Stat Improvment Menu">
+                <div>
+                  <img style="margin-left: 10%; max-width: 80%; height: auto;" src="Assets/SpellMenu.png" alt="Stat Improvment Menu">
+                  <i>Find your way here by using the /profile menu as described here: <u style="color: #0285c2;"><a href="Everything_about_You.html">Everything about You</a></u></i>
+                </div>
                 <div id="text-content" style="text-align: center;">
-                  Explain here how spell selection works, what each column is, the order the rows are in, etc.
+                  <p>Spells are split into 4 schools of magic:</p> 
+                  <ul>                  
+                    <li><b><label style="color: #db6619;">Pyromancy</label></b></li>
+
+                    <li>Wild offense and wave clear.</li>
+
+                    <li><b><label style="color: #db1f19;">Technomancy</label></b></li>
+
+                    <li>Ignoring and/or breaking enemies' defense.</li>
+
+                    <li><b><label style="color: #c7ba07;">Divinity</label></b></li>
+
+                    <li>Heal, protect, and buff allies.</li>
+
+                    <li><b><label style="color: #60db19;">Druidomancy</label></b></li>
+
+                    <li>Everyday magic. no combat utility, focuses on convenience.</li>
+                    <div class="divider divider-accent"></div> 
+                    <p>
+                      Each column in the menu displays spells from each of the four schools of magic,<br>
+                      and each row in the menu shows all the spells for a given spell slots.<br><br>
+                      
+                      <b>Therefore, players will pick one spell from each row to create their spellbook</b> 
+                    </p>
+                  </ul>
                 </div>
             </div>
             <div id="wiki-content-right">
@@ -100,36 +127,46 @@
                       The additional effectiveness of spells cast by the wand<br>
                       (extra range, area of effect, duration, etc.)</li>
                       <li><label style="color: #52b5e3;"> Mana Efficiency</label>:<br>
-                      The reduced cost of spells cast by the wand</li>
+                      The reduced mana cost of spells cast with the wand</li>
                     </ul>
                 </div>
+                <h2>Wand Crafting</h2>
                 <div id="text-content">
-                    <h2>The Profile menu</h2>
-                    <p>
-                        You can open the profile menu by typing <b>/profile</b> in the chat
-                    </p>
-                    <div class="divider divider-accent"></div> 
-                    <p>
-                        <ul>
-                            <li>* The gray glass plane shows your level and your progress towards the next level</li>
-                            <li>* Each of the other colored glass panes display the stat of the same color as the list on the left</li>
-                            <div class="divider divider-accent"></div> 
-                            <li>* <label style="color:#15dde4">Diamond</label>:<br>The Level up menu, where you can spend your skill points</li><br>
-                            <li>* <label style="color:#e4ad15">Weather</label>:<br>Shows the weather of the biome you're in (see <a style="color: #ce352a;" href="Creatures_of_Zelandris.html"><i>Creatures of Zelandris</i></a>)</li><br>
-                            <li>* <label style="color:#ab1fe2">Amethyst Block</label>:<br>Menu for selecting what spells to have in your arsenal (see <a style="color: #bb2ace;" href="Spellcasting_and_Magic.html"><i>Spellcasting and Magic</i></a>)</li><br>
-                            <li>* <label style="color:#df7b41">Book</label>:<br>Sends a link to the very wiki you're reading </li>
-                        </ul>
-                    </p>
+                  <h3>Cores</h3>
+                  <ul>
+                    <li>Every wand is built around one of four cores:</li>
+                    <li><img src="Assets/WandCraftingCores.png" alt="All four wand cores"></li>
+                    <li>The core determines the wand's appearance and multiplies the effects of the amplifiers used to craft it.</li>
+                  </ul>
+
+                  <h3>Amplifiers</h3>
+                  <ul>
+                    <li>A wand can be crafted with up to 8 amplifiers from the following list:</li>
+                    <li><img src="Assets/WandCraftingIngredients.png" alt="List of ingredients for wand crafting"></li>
+                    <li>
+                      Amplifiers add affinity to wands they are added to. Rarer materials offer more total affinity and can make more powerful wands.<br>
+                      <i style="color: #AAAAAA;">* There is no such thing as "one wand to rule them all". There is no objectively "best" amplifier</i>
+                    </li>
+                  </ul>
+                  <h3>How to Craft</h3>
+                  <ol>
+                    <li>1. Place your chosen core in the center of your hotbar (5th slot)</li>
+                    <img src="Assets/WandCraftingStep1.png" alt="Example of step 1 of wand crafting">
+                    <li>
+                      2. add the amplifiers you wish to use on the other 8 slots of your hotbar<br>
+                      <i style="color: #AAAAAA;">(the order doesn't matter)</i>
+                    </li>
+                    <img src="Assets/WandCraftingStep2.png" alt="Example of step 2 of wand crafting">
+                    <li>3. Right-Click the enchantment table</li>
+                    <img src="Assets/WandCraftingComplete.png" alt="Example of step 2 of wand crafting">
+                  </ol>
+
+                  <p>
+                    If you were successful, the appearance of your core should have changed into your new wand, otherwise, you will see an error in the chat for what went wrong
+                  </p>
                 </div>
             </div>
         </div>
         </div>
-
-        <a id="Everything_about_You"></a>
-
-        
-
-        
-
     </body>
 </html>
