@@ -7,6 +7,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
         <link rel="stylesheet" href="Zelandris.css">
+        <script src="Zelandris.js"></script>
 
     </head>
 
@@ -44,10 +45,800 @@
         <div id="wiki-content">
           <!-- Content for page goes here -->
           <h1>Being an Artisan</h1>
-          <h2>W.I.P</h2>
-        </div>
+          <div style="display: flex;">
 
-        <a id="Everything_about_You"></a>
+            <div id="wiki-content-left">
+              
+              <h2>How it works</h2>
+              <div id="text-content">
+                <p>
+                  To be an artisan, skill points must be put into the <label style="color: #be4abe;">Artisan</label> skill as opposed to the 6 standard skills.
+                  With enough <label style="color: #be4abe;">Artisan</label> level, you will unlock recipes and workstations to make more complex and more powerful items.
+                </p>
+              </div>
+              
+              <h2>Workstations</h2>
+              <div id="text-content">
+                <h3>Coffee Brewer</h3>
+                <table id="artisanTable">
+                  <tr>
+                    <td id="artisanTableItem">
+                      <p>Furnace</p>
+                      <p>Level 1</p>
+                      <img src="Assets/Artisan/Furnace.png">
+                    </td>
+                    <td id="artisanTableItem">
+                      <p>Blast Furnace</p>
+                      <p>Level 1</p>
+                      <img src="Assets/Artisan/BlastFurnace.png">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td id="artisanTableItem">
+                      <p>Blast Furnace</p>
+                      <p>Level 5</p>
+                      <img src="Assets/Artisan/Smoker.png">
+                    </td>
+                    <td id="artisanTableItem">
+                      <p>Blast Furnace</p>
+                      <p>Level 10</p>
+                      <img src="Assets/Artisan/BrewingStand.png">
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            
+            <div id="wiki-content-right">
+              <h2>Recipes</h2>
+              <div id="text-content">
+                Search for your desired recipe with the bar below:<br>
+                <i>*(Some items have similar or identical textures, hover over them to find out what they are)</i>
+                <div class="topnav">
+                  <input type="text" id="myInput" oninput="updateRecipeList()" placeholder="Search for recipe..">
+                  <ul id="ArtisanRecipeList">
+                    <li>
+                      <button onclick="toggleDisplay(this)">Pumpkin Spice Latte(Lv8)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Crushed Grapes.gif" title='Crushed Grapes'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Thorylin Mead
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Unfermented Mead.png" title='Unfermented Mead'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>5m00s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Thorylin Mead.gif" title='Thorylin Mead'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Unfermented Mead (Lv 10)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Empty Cell.png" title='Empty Cell'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Honeycomb.png" title='Honeycomb'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Empty Cell.png" title='Empty Cell'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Honeycomb.png" title='Honeycomb'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Awkward Potion.png" title='Awkward Potion'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Honeycomb.png" title='Honeycomb'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Empty Cell.png" title='Empty Cell'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Honeycomb.png" title='Honeycomb'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Empty Cell.png" title='Empty Cell'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shaped)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Unfermented Mead.png" title='Unfermented Mead'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Pumpkin Spice Latte(Lv21)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Pumpkin Spice.png" title='Pumpkin Spice'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Milk Froth.png" title='Milk Froth'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Espresso Mix.gif" title='Espresso Mix'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Pumpkin Spice Latte.png" title='Pumpkin Spice Latte'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Pumpkin Spice(Lv21)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Pumpkin.png" title='Pumpkin'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sugar.png" title='Sugar'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Water Bottle.png" title='Water Bottle'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Pumpkin Spice.png" title='Pumpkin Spice'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Chai Tea Latte (Lv20)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Ithilian Pine Blend.gif" title='Ithilian Pine Blend'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Milk Froth.png" title='Milk Froth'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Chai Tea Latte.png" title='Chai Tea Latte'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">French vanilla (Lv19)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Espresso Mix.gif" title='Espresso Mix'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/French Syrup.png" title='French Syrup'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/French Vanilla.png" title='French Vanilla'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">French Syrup (Lv19)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Milk Bucket.png" title='Milk Bucket'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Sugar Cane.png" title='Sugar Cane'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/French Syrup.png" title='French Syrup'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Cappucino
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Cappucino Mix.png" title='Cappucino Mix'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>36s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Cappucino.png" title='Cappucino'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Cappucino Mix (Lv16)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Espresso Mix.gif" title='Espresso Mix'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Milk Froth.png" title='Milk Froth'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Cappucino Mix.png" title='Cappucino Mix'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Milk Froth (Lv16)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Milk Bucket.png" title='Milk Bucket'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Milk Froth.png" title='Milk Froth'>
+                            <label>Count: 4</label>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Latte
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Latte Mix.png" title='Latte Mix'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>36s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/latte.png" title='Latte'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Latte Mix (Lv14)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Espresso Mix.gif" title='Espresso Mix'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Milk Bucket.png" title='Milk Bucket'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Latte Mix.png" title='Latte Mix'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Espresso
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Espresso Mix.gif" title='Espresso Mix'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>18s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Espresso.png" title='Espresso'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Espresso Mix (Lv12)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Water Bottle.png" title='Water Bottle'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Espresso Dose.gif" title='Espresso Dose'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Espresso Mix.gif" title='Espresso Mix'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Espresso Dose (Lv12)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shaped)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Espresso Dose.gif" title='Espresso Dose'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Iced Coffee (Lv8)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roast Coffee Mix.png" title='Any Roast Coffee Mix'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Ice.png" title='Ice'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Iced Coffee.png" title='Iced Coffee'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Dark Roast Coffee
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Dark Roast Coffee Mix.png" title='Dark Roast Coffee Mix'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>3m00s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Dark Roast Coffee.png" title='Dark Roast Coffee'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Dark Roast Coffee Mix (Lv5)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Water Bottle.png" title='Water Bottle'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Dark Roasted Coffee beans.gif" title='Dark Roasted Coffee Beans'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Dark Roast Coffee Mix.png" title='Dark Roast Coffee Mix'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Medium Roast Coffee
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Medium Roast Coffee Mix.png" title='Medium Roast Coffee Mix'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>3m00s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Medium Roast Coffee.png" title='Medium Roast Coffee'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Medium Roast Coffee Mix (Lv4)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Water Bottle.png" title='Water Bottle'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Medium Roasted Coffee Beans.png" title='Medium Roasted Coffee Beans'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Medium Roast Coffee Mix.png" title='Medium Roast Coffee Mix'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Blonde Roast Coffee
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Blonde Roast Coffee Mix.png" title='Blonde Roast Coffee Mix'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>3m00s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Blonde Roast Coffee.png" title='Blonde Roast Coffee'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Blonde Roast Coffee Mix (Lv3)
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <table id="artisanTable">
+                              <tr>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Water Bottle.png" title='Water Bottle'>
+                                </td>
+                                <td id="artisanTableItem">
+                                  <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Crafting Table.png" title='Crafting Table'>
+                            <label>(Shapeless)</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Blonde Roast Coffee Mix.png" title='Blonde Roast Coffee Mix'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Dark Roasted Coffee Beans
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Medium Roasted Coffee Beans.png" title='Medium Roasted Coffee Beans'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>10s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Dark Roasted Coffee Beans.gif" title='Dark Roasted Coffee Beans'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Medium Roasted Coffee Beans
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>10s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Medium Roasted Coffee Beans.png" title='Medium Roasted Coffee Beans'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Blonde Roasted Coffee Beans
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Coffee Beans.png" title='Coffee Beans'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Smoker.png" title='Smoker'>
+                            <label>10s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Blonde Roasted Coffee Beans.png" title='Blonde Roasted Coffee Beans'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                    <li>
+                      <button onclick="toggleDisplay(this)">Coffee Beans
+                        <div>
+                          <div id="ArtisanRecipeListLeft">
+                            <label>Input</label>
+                            <img src="Assets/Artisan/Sweet Berries.png" title='Sweet Berries'>
+                          </div>
+                          <div id="ArtisanRecipeListCenter">
+                            <label>Workstation</label>
+                            <img src="Assets/Artisan/Furnace.png" title='Furnace'>
+                            <label>10s</label>
+                          </div>
+                          <div id="ArtisanRecipeListRight">
+                            <label>Output</label>
+                            <img src="Assets/Artisan/Coffee Beans.png" title='Coffee Beans'>
+                          </div>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         
 
