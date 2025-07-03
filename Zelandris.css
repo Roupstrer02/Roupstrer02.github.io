@@ -94,6 +94,10 @@ text-align: center;
     width: 50%;
 }
 
+#wiki-content-fullspan {
+    width: 100%;
+}
+
 #wiki-content-left #text-content {
     padding: 1%;
     border: solid;
@@ -138,10 +142,11 @@ text-align: center;
     background-color: black;
     color: white;
     padding: 2%;
-    font-size: 70%;
+    font-size: 90%;
     border-radius: 25px;
-    width: 90%;
+    width: 95%;
     margin: auto;
+    text-align: left;
         
 }
 
@@ -234,4 +239,85 @@ text-align: center;
 
 #ArtisanRecipeList li button:hover:not(.header) {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+#LootTable {
+    width: 100%;
+    table-layout: fixed;
+    /* padding: 1%; */
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 80%;
+}
+
+#LootTable #TitleRow {
+    font-size: 24px;
+    background-color: #111;
+    padding: 1%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* border-radius: 15px; */
+}
+
+#LootTable #FirstRowLeft {
+    font-size: 20px;
+    background-color: rgb(209, 42, 0);
+    padding: 1%;
+}
+
+#LootTable #FirstRowRight {
+    font-size: 20px;
+    background-color: #3C0;
+    padding: 1%;
+}
+
+#LootTable #WeaponCell {
+    background-color: rgb(204, 109, 0);
+    padding: 1%;
+}
+
+#LootTable #ArmourCell {
+    background-color: rgb(99, 185, 70);
+    padding: 1%;
+}
+
+#WeaponCell p {
+    height: 17%;
+}
+
+#ArmourCell p {
+    height: 20%;
+}
+
+#MonsterCardDisplayCase {
+    height: 100%;
+    width: 90%;
+    justify-self: center;
+    
+}
+
+#MonsterCardDisplayCase tr {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#MonsterCardDisplayCase tr td{
+    width: 27%;
+    margin: auto;
+}
+
+#MonsterCard {
+    background-color: #12343d;
+}
+
+#MonsterCard p {
+    justify-self: center;
+    margin-top: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 80%;
+    border-top: solid;
 }

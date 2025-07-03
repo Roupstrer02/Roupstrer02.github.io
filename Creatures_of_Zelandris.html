@@ -42,9 +42,139 @@
 
 
         <div id="wiki-content">
+        
           <!-- Content for page goes here -->
           <h1>Creatures of Zelandris</h1>
-          <h2>W.I.P</h2>
+        
+          <div style="display: flex;">
+            
+            <div id="wiki-content-left">
+              <h2>Mob Loot</h2>
+              <div id="text-content">
+                <h3>Experience</h3>
+                <p><b>All</b> regular creatures killed <b>always</b> drop EXP and equipment according to their level.<br><br>
+                <label style="background-color: #252525; padding: 2%; border-radius: 25px / 25px;">Awarded_EXP = ((2 ^ ((mobLevel+1) / 5) - 2 ^ (mobLevel / 5)) * 5)</label>
+                
+                </p>
+                
+                <h3>Equipment</h3>
+                A single piece of equipment is always dropped on a mob kill and is attributed to the player who dealt the killing blow on the mob.<br>
+                Equipment comes in 5 rarites:<br>
+                <b>Common, Uncommon, Rare, Epic, Legendary</b>
+            </div>
+
+            </div>
+            <div id="wiki-content-right">
+              <h2>Loot table</h2>
+              <table id="LootTable">
+                <tr>
+                  <td colspan="2" id="TitleRow"><b>All Equipment (100%)</b></td>
+                </tr>
+                <tr>
+                  <td id="FirstRowLeft"><b>Weapon (50%)</b></td>
+                  <td id="FirstRowRight"><b>Armor (50%)</b></td>
+                </tr>
+                <tr>
+                  <td id="WeaponCell">
+                    <p>Dagger (8.33%)</p>
+                    <p>Longsword (8.33%)</p>
+                    <p>Greatsword (8.33%)</p>
+                    <p>Shortbow (8.33%)</p>
+                    <p>Longbow (8.33%)</p>
+                    <p>Crossbow (8.33%)</p>
+                  </td>
+                  <td id="ArmourCell">
+                    <p>Helmet (12.5%)</p>
+                    <p>Chestplate (12.5%)</p>
+                    <p>Leggings (12.5%)</p>
+                    <p>Boots (12.5%)</p>
+                    <p>Shield (12.5%)</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            
+          </div>
+
+          <h2>Mob Modifiers</h2>
+          
+          <div id="wiki-content-fullspan">
+            <table id="MonsterCardDisplayCase">
+              <tr>
+                <td>
+                  <div id="MonsterCard">
+                    <label>Zombie</label>
+                    <img src="Assets/ZombieHead.png" alt="Zombie Head">
+                    <p>
+                      Damage: +5% <br> 
+                      Movement Speed: -2%
+                    </p>
+                  </div>
+                </td>
+                <td>
+                  <div id="MonsterCard">
+                    <label>Zombie</label>
+                    <img src="Assets/SkeletonHead.png" alt="Zombie Head">
+                    <p>Damage: +5%</p>
+                  </div>
+                </td>
+                <td>
+                  <div id="MonsterCard">
+                    <label>Zombie</label>
+                    <img src="Assets/CreeperHead.png" alt="Zombie Head">
+                    <p>Damage: +5%</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div id="MonsterCard">
+                    <label>Zombie</label>
+                    <img src="Assets/SpiderHead.png" alt="Zombie Head">
+                    <p>Damage: +5%</p>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <p style="margin-bottom: 10%;">All positive mob modifiers are repeated for every rarity after "Common"</p>
+                    <p>All negative mob modifiers are repeated for every rarity before "Epic"</p>
+                    <p><i>(legendary equipment has no negative modifiers)</i></p>
+                  </div>
+                </td>
+                <td>
+                  <div id="MonsterCard">
+                    <label>Zombie</label>
+                    <img src="Assets/EndermanHead.png" alt="Zombie Head">
+                    <p>Damage: +5%</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div id="MonsterCard">
+                    <label>Zombie</label>
+                    <img src="Assets/BlazeHead.png" alt="Zombie Head">
+                    <p>Damage: +5%</p>
+                  </div>
+                </td>
+                <td>
+                  <div id="MonsterCard">
+                    <label>Zombie</label>
+                    <img src="Assets/WitchHead.png" alt="Zombie Head">
+                    <p>Damage: +5%</p>
+                  </div>
+                </td>
+                <td>
+                  <div id="MonsterCard">
+                    <label>Zombie</label>
+                    <img src="Assets/GhastHead.png" alt="Zombie Head">
+                    <p>Damage: +5%</p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        
         </div>
 
         <a id="Everything_about_You"></a>
