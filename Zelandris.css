@@ -99,7 +99,7 @@ text-align: center;
 }
 
 #wiki-content-left #text-content {
-    padding: 1%;
+    padding: 2%;
     border: solid;
     
 }
@@ -258,7 +258,6 @@ text-align: center;
     padding: 1%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    /* border-radius: 15px; */
 }
 
 #LootTable #FirstRowLeft {
@@ -289,6 +288,7 @@ text-align: center;
 
 #ArmourCell p {
     height: 20%;
+    margin-top: auto;
 }
 
 #MonsterCardDisplayCase {
@@ -320,4 +320,35 @@ text-align: center;
     padding-bottom: 5%;
     width: 80%;
     border-top: solid;
+}
+
+#MonsterCard img {
+    border: none;
+}
+
+#RarityTableCell.RowTitle {
+    color: black;
+    background-color:lightgray;
+    border-right: 2px solid black;
+}
+
+#RarityTableCell.Common {
+    color: black;
+    background-color: white;
+}
+
+#RarityTableCell.Uncommon {
+    background-color: rgb(78, 207, 61);
+}
+
+#RarityTableCell.Rare {
+    background-color: rgb(19, 109, 226); 
+}
+
+#RarityTableCell.Epic {
+    background-color: rgb(198, 53, 255);
+}
+
+#RarityTableCell.Legendary {
+    background-color: rgb(250, 140, 37);
 }
