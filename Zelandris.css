@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap');
 /* ======================================================================================================================================================================== */
 
 
@@ -10,6 +10,16 @@
     width: 100%;
     height: 100%;
     z-index: -1;
+    opacity: 100%;
+}
+
+#LarianBackgroundImage {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0%;
+    
 }
 
   /* Navbar */
@@ -43,7 +53,7 @@ margin: auto;
 margin-top: 5%;
 margin-bottom: 2%;
 width: 75%;
-background-color: #163f4a;
+background-color: rgb(22, 63, 74);
 border-radius: 25px;
 color: white;
 opacity: 93%;
@@ -83,6 +93,14 @@ text-align: center;
     font-size: 35px;
     font-family:"Kaushan Script", cursive;
     font-weight: 800;
+    margin-top: 10px;
+}
+
+#wiki-content h4 {
+    text-align: center;
+    font-size: 25px;
+    font-family:"Kaushan Script", cursive;
+    font-weight: 1;
     margin-top: 10px;
 }
 
@@ -252,7 +270,7 @@ text-align: center;
     height: 80%;
 }
 
-#LootTable #TitleRow {
+#TitleRow {
     font-size: 24px;
     background-color: #111;
     padding: 1%;
@@ -291,26 +309,27 @@ text-align: center;
     margin-top: auto;
 }
 
-#MonsterCardDisplayCase {
-    height: 100%;
+#CardDisplayCase {
     width: 90%;
     justify-self: center;
     
 }
 
-#MonsterCardDisplayCase tr {
+#CardDisplayCase tr {
     display: flex;
     justify-content: center;
     margin-top: 1%;
     margin-bottom: 1%;
 }
-#MonsterCardDisplayCase tr td{
+#CardDisplayCase tr td{
     width: 27%;
-    margin: auto;
+    height: 27%;
+    margin: 1%;
 }
 
 #MonsterCard {
     background-color: #12343d;
+    min-height: 100%;
 }
 
 #MonsterCard p {
@@ -320,6 +339,7 @@ text-align: center;
     padding-bottom: 5%;
     width: 80%;
     border-top: solid;
+    font-size: 18px;
 }
 
 #MonsterCard img {
@@ -351,4 +371,49 @@ text-align: center;
 
 #RarityTableCell.Legendary {
     background-color: rgb(250, 140, 37);
+}
+
+#RuneTable {
+    width: 100%;
+    table-layout: fixed;
+    /* padding: 1%; */
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 80%;
+}
+
+#RuneCard {
+    background-color: #12343d;
+}
+
+#RuneCard img {
+    background-color: lightgray;
+}
+
+#RuneCard label {
+    font-size: 18px;
+}
+
+#RuneForgeTutorialStep {
+    width: 75%;
+    justify-self: center;
+    margin-bottom: 3%;
+}
+
+#RuneForgeBeforeAndAfter {
+    width: 100%;
+    justify-self: center;
+}
+
+#LarianText {
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+#LarianText h3 {
+    font-family: "Manufacturing Consent", cursive;
+    font-weight: 100;
+    font-style: normal;
 }

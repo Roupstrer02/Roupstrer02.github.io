@@ -2,16 +2,18 @@
 <html data-theme="dark">
     <head>
 
-        <title>The Elite of Zelandris</title>
+        <title>Elites of Zelandris</title>
         <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
         <link rel="stylesheet" href="Zelandris.css">
+        <script src="Zelandris.js"></script>
 
     </head>
 
     <body>
       <img src="Assets/background.png" alt="Forest Scenery" id="backgroundimage">
+      <img src="Assets/backgroundCave.png" alt="Cave Ambiance" id="LarianBackgroundImage">
         <div id="myNavbarSpace">
             <div class="navbar bg-base-100">
               <div class="navbar-start">
@@ -32,7 +34,7 @@
                   <li><a class="btn btn-ghost text-xl" href="Spellcasting_and_Magic.html">Spellcasting and Magic</a></li>
                   <li><a class="btn btn-ghost text-xl" href="Being_an_Artisan.html">Being an Artisan</a></li>
                   <li><a class="btn btn-ghost text-xl" href="Creatures_of_Zelandris.html">Creatures of Zelandris</a></li>
-                  <li><a class="btn btn-ghost text-xl" href="Elite_of_Zelandris.html">The Elite of Zelandris</a></li>
+                  <li><a class="btn btn-ghost text-xl" href="Elite_of_Zelandris.html">The Elites of Zelandris</a></li>
                 </ul>
               </div>
               <div class="navbar-end">
@@ -42,17 +44,189 @@
 
 
         <div id="wiki-content">
-          <!-- Content for page goes here -->
-          <h1>The Elite of Zelandris</h1>
-        
-          <h2>W.I.P</h2>
+
+          <h1>Elites of Zelandris</h1>
+
+          <table id="CardDisplayCase">
+            <tr>
+              <td id="MonsterCard">
+                <h3>Arcane Golem</h3>
+                <h4>Immovable Wall of Zanthar</h4>
+                <img src="Assets/ArcaneGolem.png" alt="Arcane Golem">
+                <p>
+                  Spawns in plains biomes
+                </p>
+              </td>
+              <td id="MonsterCard">
+                <h3>Quakefish</h3>
+                <h4>Terror Beneath the Sands</h4>
+                <img src="Assets/Quakefish.png" alt="Quakefish">
+                <p>
+                  Spawns in plains desert biomes
+                </p>
+              </td>
+              <td id="MonsterCard">
+                <h3>Lunaris Stag</h3>
+                <h4>Light in the Dark</h4>
+                <img src="Assets/LunarisStag.png" alt="Lunaris Stag">
+                <p>
+                  Spawns in forest biomes
+                </p>
+              </td>
+            </tr>
+          </table>
+          <div class="divider divider-accent" style="width: 90%; justify-self: center;"></div>
+          <h2>Runes</h2>
+          <div style="display: flex">
+            <div id="wiki-content-fullspan">
+              <!-- Better yet, two runes can be combined into an improved rune that yields the improvements of both runes used to craft it -->
+              <p style="width: 80%;justify-self: center;">Any elite creature can drop runes. Using and anvil, runes can be added to equipment to further improve some of that equipment's stats, changing the item's name in the process.<br></p>
+              <div style="display: flex;">
+              <div id="wiki-content-left" style="border-right: solid #00AAAA 3px ;">
+                  <h3>Rune Varieties:</h3>
+                  <table id="CardDisplayCase">
+                    <tr>
+                      <td>
+                        <div id="RuneCard">
+                          <label>Rune of Fury</label>
+                          <img src="Assets/RuneOfFury.png" alt="Rune of Fury">
+                          <p>
+                            Damage: +15% <br> 
+                            Crit Damage: +20%
+                          </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div id="RuneCard">
+                          <label>Rune of Order</label>
+                          <img src="Assets/RuneOfOrder.png" alt="Rune of Order">
+                          <p>
+                            Crit Chance: +8% <br>
+                            Multi Hit: +12%
+                          </p>
+                        </div>
+                      </td>
+                      <td>
+                        <div id="RuneCard">
+                          <label>Rune of Excitement</label>
+                          <img src="Assets/RuneOfExcitement.png" alt="Rune of Excitement">
+                          <p>
+                            Max Stamina: +1 <br>
+                            Stamina Regen: +1/s
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                    <td>
+                      <div id="RuneCard">
+                        <label>Rune of Joy</label>
+                        <img src="Assets/RuneOfJoy.png" alt="Rune of Joy">
+                        <p>
+                          Max Health: +10% <br>
+                          Health Regen: +25% <br>
+                          Defense: +5%
+                        </p>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="RuneCard">
+                        <label>Rune of Patience</label>
+                        <img src="Assets/RuneOfPatience.png" alt="Rune of Patience">
+                        <p>
+                          Max Mana: +20% <br>
+                          Mana Regen: +1/s
+                        </p>
+                      </div>
+                    </td>
+                      <td>
+                        <div id="RuneCard">
+                          <label>Rune of Insight</label>
+                          <img src="Assets/RuneOfInsight.png" alt="Rune of Insight">
+                          <p>
+                            Movement Speed: +100% <br>
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <h3>Combination Runes</h3>
+                  <p>Runes can either be used on their own, or combined with another rune to create a greater rune, adding the effects of both runes together:</p>
+                  <div style="display: flex; margin: 2%;">
+                    <div id="RuneCard" style="width: 28%;height: 25%;">
+                      <label style="color: rgb(171, 0, 0);"><b>Rune of Fury</b></label>
+                      <img src="Assets/RuneOfFury.png" alt="Rune of Fury">
+                      <p>
+                        Damage: +15% <br> 
+                        Crit Damage: +20%
+                      </p>
+                    </div>
+                  
+                    <label style="font-size: 100px;">+</label>
+                    
+                    <div id="RuneCard"  style="width: 28%;height: 25%;">
+                      <label style="color: rgb(0, 95, 178)"><b>Rune of Patience</b></label>
+                      <img src="Assets/RuneOfPatience.png" alt="Rune of Patience">
+                      <p>
+                        Max Mana: +20% <br>
+                        Mana Regen: +1/s
+                      </p>
+                    </div>
+
+                    <label style="font-size: 100px;">=</label>
+
+                    <div id="RuneCard"  style="width: 28%;height: 25%;">
+                      <label style="color: rgb(171, 0, 0);"><b>Patient Rune of Fury</b></label>
+                      <img src="Assets/RuneOfFury.png" alt="Patient Rune of Fury">
+                      <p>
+                        Damage: +15% <br> 
+                        Crit Damage: +20% <br>
+                        Max Mana: +20% <br>
+                        Mana Regen: +1/s
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+                <div id="wiki-content-right">
+                  <h3>Using Runes</h3>
+                  <p>Each piece of equipment can only slot 1 rune, applying a different rune onto a piece with an existing rune, replaces the old rune with the new one</p>
+                  <h3>How to use</h3>
+
+                  <div id="RuneForgeTutorialStep">
+                    <p>1. First, interact with an anvil to open the Rune Forge:</p>
+                    <img src="Assets/RuneForgeStep1.png" alt="Step 1 of using the Rune Forge">
+                  </div>
+                  <div id="RuneForgeTutorialStep">
+                    <p>2. Place the item you want to apply a rune to:</p>
+                    <img src="Assets/RuneForgeStep2.png" alt="Step 2 of using the Rune Forge">
+                  </div>
+
+                  <div style="display: flex;">
+                    <div id="RuneForgeTutorialStep">
+                      <h3>Before</h3>
+                      <img src="Assets/EquipmentBeforeRune.png" alt="Equipment before applying runes">
+                    </div>
+
+                    <div id="RuneForgeTutorialStep">
+                      <h3>After</h3>
+                      <img src="Assets/EquipmentAfterRune.png" alt="Equipment after applying runes">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="divider divider-accent" style="width: 90%; justify-self: center;"></div>
+
+          <div id="LarianText">
+          <h3>Betrayed by the place I once called home, </h3>
+          <h3>And with it the claim to my rightful throne,</h3>
+          <h3>For I am become what all shall fear,</h3>
+          <h3>Cower you mongrels for Larian the Nightmare is here...</h3>
+          <h4>-59 64 1181</h4>
+          </div>
+
         </div>
-
-        <a id="Everything_about_You"></a>
-
-        
-
-        
-
     </body>
 </html>

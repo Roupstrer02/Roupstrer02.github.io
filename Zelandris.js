@@ -1,3 +1,4 @@
+
 function hoverStatDisplayer(buttonInList) {
     let formulaDisplayer = document.getElementById("FormulaDisplayer");
 
@@ -59,3 +60,38 @@ function toggleDisplay(target) {
     }
 }
 
+let lastKnownScrollPosition = 0;
+let ticking = false;
+
+function doSomething(scrollPos) {
+      var h = document.documentElement, 
+      b = document.body,
+      st = 'scrollTop',
+      sh = 'scrollHeight';
+
+      var percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+      let colour = document.getElementById("wiki-content").style.backgroundColor;
+      colour = colour.replace("rgb(", "")
+      colour = colour.replace(")", "")
+      console.log(colour) 
+
+      let red = 22 - (22 * percent / 100)
+      let green = 63 - (63 * percent / 100)
+      let blue = 74 - (74 * percent / 100)
+      document.getElementById("backgroundimage").style.opacity = (100-percent).toString() + "%";
+      document.getElementById("LarianBackgroundImage").style.opacity = percent.toString() + "%";
+      document.getElementById("wiki-content").style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+}
+
+document.addEventListener("scroll", (event) => {
+  lastKnownScrollPosition = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      doSomething(lastKnownScrollPosition);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
