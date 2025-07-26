@@ -35,6 +35,7 @@
                   <li><a class="btn btn-ghost text-xl" href="Elite_of_Zelandris.html">The Elites of Zelandris</a></li>
                 </ul>
               </div>
+
               <div class="navbar-end">
               </div>
             </div>
@@ -44,6 +45,7 @@
         <div id="wiki-content">
           <!-- Content for page goes here -->
           <h1>Equipment</h1>
+          <div class="divider divider-accent" style="width: 90%; justify-self: center;"></div>
           <div style="display: flex;">
                
             <div id="wiki-content-left">
@@ -51,7 +53,8 @@
                 <div id="text-content">
                   <p>
                     <ul > 
-                      <p style="text-align: center;">Equipment can have some of 12 different stat improvements that kick in when it is being used:</p>
+                      <p style="text-align: center;">Equipment can have a combination of 12 different stat improvements that kick in when the equipment is being used:</p>
+
                       <div class="divider divider-accent"></div> 
                       <li> <label style="color:#e60f0f"><b>Max Health</b></label>: Increases your total max health</li>
                       <li> <label style="color:#e46969"><b>Health/s</b></label>: Increases your health gained over time</li>
@@ -66,7 +69,12 @@
                       <li> <label style="color:#bbb4bb"><b>Movement Speed%</b></label>:Improves your running speed</li>
                       <li> <label style="color:#ffffff"><b>Multi hit%</b></label>: Increases the %chance for a basic attack to additionally strike for no stamina cost</li>
                     </ul>
-                    </p>
+                  </p>
+                  <div class="divider divider-accent"></div> 
+
+                  <p style="text-align: center;">Apart from <label style="color:#d14c2b"><b>Damage</b></label> and <label style="color:#46cc42"><b>Defense</b></label>, all other stats are considered <u>sub-stats</u> and get randomly rolled on equipment</p>
+                  <p>For every 10 equipment levels, sub-stats will be rolled an additional time:<br>e.g. (equipment level 10-19 has 1 sub-stat, level 20-29 has 2 sub-stats, etc.)</p>
+                  <p><i>* the same sub-stat can be rolled more than once on a weapon:<br> e.g. (a level 100 dagger <b>could</b> have nothing but a massive amount of crit Chance% by rolling it 10 times)</i></p>
                 </div>
                 
                 <h2>Weapon types</h2>
@@ -76,12 +84,14 @@
                       There are <b>6</b> types of standard weapons types found around Zelandris:
                   </p>
                   <div class="divider divider-accent"></div>
+                  <p><i>* click on box to reveal model</i></p>
                   Melee:<br>
                   <ul>
                     <li>
                       <div class="collapse bg-base-100 border-base-300 border">
                         <input type="checkbox" />
-                        <div class="collapse-title font-semibold">Dagger | </label><label style="color: yellow"><b>4 Stamina</b></label> | <label style="color: #d14c2b"><sup>2</sup>&frasl;<sub>3</sub>x damage scaling*</label></div>
+                        <div class="collapse-title font-semibold">Dagger | </label><label style="color: yellow"><b>4 Stamina</b></label></div><div style="text-align: right;"></div>
+                        
                         <div class="collapse-content text-sm">
                           <img src="Assets/Dagger.png" alt="Model of a dagger">
                         </div>
@@ -90,7 +100,7 @@
                     <li>
                       <div class="collapse bg-base-100 border-base-300 border">
                         <input type="checkbox" />
-                        <div class="collapse-title font-semibold">Long Sword | <label style="color: yellow"><b>6 Stamina</b></label> | <label style="color: #d14c2b">1.0x damage scaling*</label></div>
+                        <div class="collapse-title font-semibold">Long Sword | <label style="color: yellow"><b>6 Stamina</b></label></div>
                         <div class="collapse-content text-sm">
                         <img src="Assets/Longsword.png" alt="Model of a longsword">
                         </div>
@@ -99,7 +109,7 @@
                     <li>
                       <div class="collapse bg-base-100 border-base-300 border">
                         <input type="checkbox" />
-                        <div class="collapse-title font-semibold">Great Sword | <label style="color: yellow"><b>15 Stamina</b></label> | <label style="color: #d14c2b"><sup>5</sup>&frasl;<sub>2</sub>x damage scaling*</label></div>
+                        <div class="collapse-title font-semibold">Great Sword | <label style="color: yellow"><b>15 Stamina</b></label></div>
                         <div class="collapse-content text-sm">
                         <img src="Assets/Greatsword.png" alt="Model of a greatsword">
                         </div>
@@ -112,7 +122,7 @@
                     <li>
                       <div class="collapse bg-base-100 border-base-300 border">
                         <input type="checkbox" />
-                        <div class="collapse-title font-semibold">Short Bow | <label style="color: yellow"><b>7 Stamina</b></label> | <label style="color: #d14c2b"><sup>7</sup>&frasl;<sub>6</sub>x damage scaling*</label></div>
+                        <div class="collapse-title font-semibold">Short Bow | <label style="color: yellow"><b>7 Stamina</b></label></div>
                         <div class="collapse-content text-sm">
                         <img src="Assets/Shortbow.png" alt="Model of a shortbow">
                         </div>
@@ -121,7 +131,7 @@
                     <li>
                       <div class="collapse bg-base-100 border-base-300 border">
                         <input type="checkbox" />
-                        <div class="collapse-title font-semibold">Long Bow | <label style="color: yellow"><b>12 Stamina</b></label> | <label style="color: #d14c2b">2.0x damage scaling*</label></div>
+                        <div class="collapse-title font-semibold">Long Bow | <label style="color: yellow"><b>12 Stamina</b></label></div>
                         <div class="collapse-content text-sm">
                         <img src="Assets/Longbow.png" alt="Model of a longbow">
                         </div>
@@ -130,14 +140,13 @@
                     <li>
                       <div class="collapse bg-base-100 border-base-300 border">
                         <input type="checkbox" />
-                        <div class="collapse-title font-semibold">Crossbow | <label style="color: yellow"><b>8 Stamina</b></label> | <label style="color: #d14c2b"><sup>4</sup>&frasl;<sub>3</sub>x damage scaling*</label></div>
+                        <div class="collapse-title font-semibold">Crossbow | <label style="color: yellow"><b>8 Stamina</b></label></div>
                         <div class="collapse-content text-sm">
                         <img src="Assets/Crossbow.png" alt="Model of a crossbow">
                         </div>
                       </div>
                     </li>
                   </ul>
-                  <label style="color: #d14c2b"><b>* damage scaling</b></label>: relative damage compared to other weapons types of equal level
                 </div>
             </div>
             <div id="wiki-content-right">
@@ -147,13 +156,14 @@
                 <p style="text-align: center;">
                     There are <b>5</b> types of standard armor options found around Zelandris:
                 </p>
-                <div class="divider divider-accent"></div> 
+                <div class="divider divider-accent"></div>
+                <p><i>* click on box to reveal model</i></p>
                 Worn:<br>
                 <ul>
                   <li>
                     <div class="collapse bg-base-100 border-base-300 border">
                       <input type="checkbox" />
-                      <div class="collapse-title font-semibold">Helmet | <label style="color: #46cc42"><sup>4</sup>&frasl;<sub>5</sub>x defense scaling</label></div>
+                      <div class="collapse-title font-semibold">Helmet | <label style="color: #46cc42">20% of armor distribution</label></div>
                       <div class="collapse-content text-sm">
                       <img src="Assets/Helmet.png" alt="Model of a helmet">
                       </div>
@@ -162,7 +172,7 @@
                   <li>
                     <div class="collapse bg-base-100 border-base-300 border">
                       <input type="checkbox" />
-                      <div class="collapse-title font-semibold">Chestplate | <label style="color: #46cc42"><sup>7</sup>&frasl;<sub>5</sub>x defense scaling</label></div>
+                      <div class="collapse-title font-semibold">Chestplate | <label style="color: #46cc42">35% of armor distribution</label></div>
                       <div class="collapse-content text-sm">
                       <img src="Assets/Chestplate.png" alt="Model of a chestplate">
                       </div>
@@ -171,7 +181,7 @@
                   <li>
                     <div class="collapse bg-base-100 border-base-300 border">
                       <input type="checkbox" />
-                      <div class="collapse-title font-semibold">Leggings | <label style="color: #46cc42">1.0x defense scaling</label></div>
+                      <div class="collapse-title font-semibold">Leggings | <label style="color: #46cc42">25% of armor distribution</label></div>
                       <div class="collapse-content text-sm">
                       <img src="Assets/Leggings.png" alt="Model of leggings">
                       </div>
@@ -180,7 +190,7 @@
                   <li>
                     <div class="collapse bg-base-100 border-base-300 border">
                       <input type="checkbox" />
-                      <div class="collapse-title font-semibold">Boots | <label style="color: #46cc42"><sup>4</sup>&frasl;<sub>5</sub>x defense scaling</label></div>
+                      <div class="collapse-title font-semibold">Boots | <label style="color: #46cc42">20% of armor distribution</label></div>
                       <div class="collapse-content text-sm">
                       <img src="Assets/Boots.png" alt="Model of boots">
                       </div>
@@ -194,7 +204,7 @@
                     <div class="collapse bg-base-100 border-base-300 border">
                       <input type="checkbox" />
                       <div class="collapse-title font-semibold">
-                        Shield* | <label style="color: #46cc42">1.0x defense scaling</label><br>
+                        Shield<label style="color: #46cc42"></label><br>
                         <i>* Shields no longer block projectiles like in vanilla Minecraft, blocking now increases your total defense by (shield level)%</i>
                       </div>
                       <div class="collapse-content text-sm">
@@ -205,7 +215,7 @@
                   
                   </li>
                 </ul>
-              <label style="color: #46cc42"><b>* defense scaling</b></label>: relative defense compared to other armour types of equal level
+              <label style="color: #46cc42"><b>* armor distribution</b></label>: portion of defense offered by a given piece of armor (assuming all armor pieces are the same level)
               </div>
               <h2>Combat styles</h2>
               <div id="text-content"> 
@@ -217,9 +227,8 @@
                 <ul>
                   <li><h3>Rogue</h3>
                     <p>
-                      <i>A rogue carries two daggers, one in each hand. In doing so, they can best utilize the attributes of both weapons at the same time,
-                      instead of being limited to their main hand.</i><br><br>
-                      Effect: <b> Damage of attacks considers 75% of the damage of <u>both</u> daggers instead of only considering the main hand weapon and applies the substats of both daggers</b>
+                      <i>A rogue carries two daggers, one in each hand. In doing so, they can use the attributes of both weapons at the same time.</i><br><br>
+                      Effect: <b> 1. Weapon damage = 75% of <u>both</u> daggers' damage <br>2. the sub-stats of both weapons are applied</b>
                     </p>
                   </li>
                   <li><h3>Knight</h3>

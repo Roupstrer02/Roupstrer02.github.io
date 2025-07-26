@@ -45,9 +45,90 @@
         
           <!-- Content for page goes here -->
           <h1>Creatures of Zelandris</h1>
-        
+          <div class="divider divider-warning" style="width: 90%; justify-self: center;"></div>
+          <div id="wiki-content-fullspan">
+            <h2>Weather & Biomes</h2>
+            <div id="text-content">
+              <p>At the start of each day, every <label style="color:#3ec030">biome</label> is assigned a <label style="color:#e4ad15">weather</label> condition</p>
+              <p>All regular mobs spawn with a level determined by two factors: the <label style="color:#3ec030">biome</label> it spawns in, and the <label style="color:#e4ad15">weather</label> in that biome</p>
+              <p>There are 13 weather conditions, each with their own difficulty rating (ranging from 0-12). No two biomes groups ever have the same weather.</p>
+              <p>The biome will also factor in to the mob's level. Some biomes make mobs easier, while others make them much harder</p>
+              <table id="WeatherTable">
+                <tr id="TitleRow"><td colspan="13">Weather Challenge Ratings</td></tr>
+                <tr>
+                  <td style="background-color: #252525;">Beautiful day</td>
+                  <td style="background-color: #21611a;">Pleasant breeze</td>
+                  <td style="background-color: #359a2a;">Windy</td>
+                  <td style="background-color: #dbc735;">Strong gusts</td>
+                  <td style="background-color: #d0af1d;">Harsh Rainfall</td>
+                  <td style="background-color: #30d1c9;">Stormy day</td>
+                  <td style="background-color: #1a5461;">Torrential Downpour</td>
+                  <td style="background-color: #2b3fd2;">Hurricane</td>
+                  <td style="background-color: #171476;">Poseidon's Wrath</td>
+                  <td style="background-color: #a429ab;">Zeus's Fury</td>
+                  <td style="background-color: #68165e;">Hades' Revenge</td>
+                  <td style="background-color: #bf0f0f;">The River Styx cries...</td>
+                  <td style="background-color: #550e0e;">The frenzy has begun!</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #252525; border-bottom-left-radius: 10px;">0</td>
+                  <td style="background-color: #21611a;">1</td>
+                  <td style="background-color: #359a2a;">2</td>
+                  <td style="background-color: #dbc735;">3</td>
+                  <td style="background-color: #d0af1d;">4</td>
+                  <td style="background-color: #30d1c9;">5</td>
+                  <td style="background-color: #1a5461;">6</td>
+                  <td style="background-color: #2b3fd2;">7</td>
+                  <td style="background-color: #171476;">8</td>
+                  <td style="background-color: #a429ab;">9</td>
+                  <td style="background-color: #68165e;">10</td>
+                  <td style="background-color: #bf0f0f;">11</td>
+                  <td style="background-color: #550e0e; border-bottom-right-radius: 10px;">12</td>
+                </tr>
+              </table>
+              
+                            <table id="WeatherTable">
+                <tr id="TitleRow"><td colspan="13">Biome Challenge Modifiers</td></tr>
+                <tr>
+                  <td style="background-color: #252525;">plains</td>
+                  <td style="background-color: #21611a;">savanna</td>
+                  <td style="background-color: #359a2a;">forest</td>
+                  <td style="background-color: #dbc735;">tundra</td>
+                  <td style="background-color: #dbc735;">swamp</td>
+                  <td style="background-color: #d0af1d;">stony</td>
+                  <td style="background-color: #30d1c9;">mountainous</td>
+                  <td style="background-color: #1a5461;">jungle</td>
+                  <td style="background-color: #2b3fd2;">sand</td>
+                  <td style="background-color: #2b3fd2;">ocean</td>
+                  <td style="background-color: #2b3fd2;">caves</td>
+                  <td style="background-color: #171476;">nether</td>
+                  <td style="background-color: #a429ab;">end</td>
+                </tr>
+                <tr>
+                  <td style="background-color: #252525; border-bottom-left-radius: 10px;">0.2</td>
+                  <td style="background-color: #21611a;">0.25</td>
+                  <td style="background-color: #359a2a;">0.3</td>
+                  <td style="background-color: #dbc735;">0.5</td>
+                  <td style="background-color: #dbc735;">0.5</td>
+                  <td style="background-color: #d0af1d;">0.6</td>
+                  <td style="background-color: #30d1c9;">0.65</td>
+                  <td style="background-color: #1a5461;">0.75</td>
+                  <td style="background-color: #2b3fd2;">1.0</td>
+                  <td style="background-color: #2b3fd2;">1.0</td>
+                  <td style="background-color: #2b3fd2;">1.0</td>
+                  <td style="background-color: #171476;">1.1</td>
+                  <td style="background-color: #a429ab; border-bottom-right-radius: 10px;">1.25</td>
+                </tr>
+              </table>
+              <div style="background-color: #252525; padding: 0.5%; border-radius: 25px / 25px;margin-bottom: 20px; width: 50%; justify-self: center;">
+                <p><b>Mob_Level</b> = ( 6.5 * WeatherChallengeRating ) - ( x * 6.5 ) * biomeChallengeModifier<br></p>
+                <p><i>*x = random decimal number from 0 to 1*</i></p>
+              </div>
+            </div>
+          </div>
           <div style="display: flex;">
             
+
             <div id="wiki-content-left">
               <h2>Mob Loot</h2>
               <div id="text-content">
