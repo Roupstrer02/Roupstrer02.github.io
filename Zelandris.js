@@ -4,13 +4,13 @@ function hoverStatDisplayer(buttonInList) {
 
     switch(buttonInList) {
         case 1:
-            formulaDisplayer.innerText = "Max health = 20 + (equipment_getMaxHealth * (1 + (0.01 * Vitality))) + (Vitality - 1) * 25";
+            formulaDisplayer.innerText = "Max health = (1 + (0.01 * Vitality)) * (10.2 * 2 ^ (Player_Lvl/8) + Total_Equipment_MaxHealth)";
             break;
         case 2:
-            formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = 4 * (0.25 + ((Resilience - 1) * 0.05) + equipment_HealthRegen) * Healing_Received%/100";
+            formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = 4 * (0.25 + ((Resilience - 1) * 0.05) + Total_Equipment_HealthRegen) * Healing_Received%/100";
             break;
         case 3:
-            formulaDisplayer.innerText = "Damage = Strength + Total_Equipment_Damage * (Strength/100)\n*if unarmed: Damage = 1";
+            formulaDisplayer.innerText = "Damage = Strength + Total_Equipment_Damage * (Strength/100)\n*if unarmed: Damage = 0.2";
             break;
         case 4:
             formulaDisplayer.innerText = "MovementSpeed% = 100 + Dexterity + Total_Equipment_MoveSpeed% \n MultiHit% = Dexterity + Total_Equipment_MultiHit%";
@@ -86,7 +86,7 @@ function doSomething(scrollPos) {
 document.addEventListener("scroll", (event) => {
   lastKnownScrollPosition = window.scrollY;
 
-  if (!ticking) {
+  if (!ticking && document.title == "Elites of Zelandris") {
     window.requestAnimationFrame(() => {
       doSomething(lastKnownScrollPosition);
       ticking = false;
