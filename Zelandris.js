@@ -4,28 +4,28 @@ function hoverStatDisplayer(buttonInList) {
 
     switch(buttonInList) {
         case 1:
-            formulaDisplayer.innerText = "Max health = (1 + (0.01 * Vitality)) * (10.2 * 2 ^ (Player_Lvl/8) + Total_Equipment_MaxHealth)";
+            formulaDisplayer.innerText = "- MaxHP = (1 + (0.01 * (Vitality -1))) * (10.2 * 2 ^ (Player_Lvl/8) + Equipment_MaxHP) - 1";
             break;
         case 2:
-            formulaDisplayer.innerText = "Healing Received% = 100 + Resilience \n HealthRegen/s = 4 * (0.25 + ((Resilience - 1) * 0.05) + Total_Equipment_HealthRegen) * Healing_Received%/100";
+            formulaDisplayer.innerText = "- Healing Received% = 100 + Resilience \n - HPRegen/s = (((MaxHP / 80) + (Resilience - 1) * (MaxHP / 2800)) + Equipment_HPRegen/s)  * Healing_Received%/100";
             break;
         case 3:
-            formulaDisplayer.innerText = "Damage = Strength + Total_Equipment_Damage * (Strength/100)\n*if unarmed: Damage = 0.2";
+            formulaDisplayer.innerText = "- Damage = Strength + Total_Equipment_Damage * (Strength/100)\n*if unarmed: Damage = 0.2";
             break;
         case 4:
-            formulaDisplayer.innerText = "MovementSpeed% = 100 + Dexterity + Total_Equipment_MoveSpeed% \n MultiHit% = Dexterity + Total_Equipment_MultiHit%";
+            formulaDisplayer.innerText = "- MovementSpeed% = 100 + Dexterity + Total_Equipment_MoveSpeed% \n - MultiHit% = Dexterity + Total_Equipment_MultiHit%";
             break;
         case 5:
-            formulaDisplayer.innerText = "Max Mana = 20 + (Intelligence - 1) * 8 + Total_Equipment_Max_Mana";
+            formulaDisplayer.innerText = "- Max_Mana = 20 + (Intelligence - 1) * 8 + Total_Equipment_Max_Mana";
             break;
         case 6:
-            formulaDisplayer.innerText = "Base Spell Damage = 2^((Wisdom/5) * 1.25)";
+            formulaDisplayer.innerText = "- Base Spell Damage = 2 ^ ((Wisdom/8) / 1.25)";
             break;
         case 7:
-            formulaDisplayer.innerText = "A certain level of Artisan is required for using new crafting recipes and stations";
+            formulaDisplayer.innerText = "- A certain level of Artisan is required for using new crafting recipes and stations";
             break;
         default:
-          formulaDisplayer.innerText = "Undefined Button Behaviour";    
+          formulaDisplayer.innerText = "- Undefined Button Behaviour";    
       }
 
 }
