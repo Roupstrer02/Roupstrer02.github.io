@@ -7,7 +7,7 @@ function hoverStatDisplayer(buttonInList) {
             formulaDisplayer.innerText = "- MaxHP = (1 + (0.01 * (Vitality -1))) * (10.2 * 2 ^ (Player_Lvl/8) + Equipment_MaxHP) - 1";
             break;
         case 2:
-            formulaDisplayer.innerText = "- Healing Received% = 100 + Resilience \n - HPRegen/s = (((MaxHP / 80) + (Resilience - 1) * (MaxHP / 2800)) + Equipment_HPRegen/s)  * Healing_Received%/100";
+            formulaDisplayer.innerText = "- Healing Received% = 100 + Resilience \n - HPRegen/s = (((MaxHP / 80) + (Resilience - 1) * (MaxHP / 11200)) + Equipment_HPRegen/s)";
             break;
         case 3:
             formulaDisplayer.innerText = "- Damage = Strength + Total_Equipment_Damage * (1 + Strength/100)\n*if unarmed: Damage = 0.2";
