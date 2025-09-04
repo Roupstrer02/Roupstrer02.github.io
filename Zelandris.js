@@ -19,7 +19,7 @@ function hoverStatDisplayer(buttonInList) {
             formulaDisplayer.innerText = "- Max_Mana = 20 + (Intelligence - 1) * 8 + Total_Equipment_Max_Mana";
             break;
         case 6:
-            formulaDisplayer.innerText = "- Base Spell Damage = 2 ^ ((Wisdom/8) / 1.25)";
+            formulaDisplayer.innerText = "- Base Spell Damage = 2 ^ ((Wisdom/8) * 2/3)";
             break;
         case 7:
             formulaDisplayer.innerText = "- A certain level of Artisan is required for using new crafting recipes and stations";
