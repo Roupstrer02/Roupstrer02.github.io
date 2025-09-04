@@ -84,6 +84,7 @@
               <div style="display: flex;">
               <div id="wiki-content-left" style="border-right: solid #00AAAA 3px ;">
                   <h3>Rune Varieties:</h3>
+                  
                   <table id="CardDisplayCase">
                     <tr>
                       <td>
@@ -91,7 +92,7 @@
                           <label>Rune of Fury</label>
                           <img src="Assets/RuneOfFury.png" alt="Rune of Fury">
                           <p>
-                            Damage: +15% <br> 
+                            Damage: 1.15x  <br> 
                             Crit Damage: +20%
                           </p>
                         </div>
@@ -123,9 +124,9 @@
                         <label>Rune of Joy</label>
                         <img src="Assets/RuneOfJoy.png" alt="Rune of Joy">
                         <p>
-                          Max Health: +10% <br>
-                          Health Regen: +25% <br>
-                          Defense: +5%
+                          Max Health: 1.2x  <br>
+                          Health Regen: 1.1x  <br>
+                          Defense: 1.1x 
                         </p>
                       </div>
                     </td>
@@ -134,8 +135,8 @@
                         <label>Rune of Patience</label>
                         <img src="Assets/RuneOfPatience.png" alt="Rune of Patience">
                         <p>
-                          Max Mana: +20% <br>
-                          Mana Regen: +1/s
+                          Max Mana: 1.2x <br>
+                          Mana Regen: +0.5/s
                         </p>
                       </div>
                     </td>
@@ -144,45 +145,91 @@
                           <label>Rune of Insight</label>
                           <img src="Assets/RuneOfInsight.png" alt="Rune of Insight">
                           <p>
-                            Movement Speed: +100% <br>
+                            Movement Speed: 2x  <br>
                           </p>
                         </div>
                       </td>
                     </tr>
                   </table>
                   <h3>Combination Runes</h3>
-                  <p>Runes can either be used on their own, or combined with another rune to create a greater rune, adding the effects of both runes together:</p>
+                  <p>Runes can either be used on their own or combined with another rune to create a greater rune, additively combining the effects of both runes together:</p>
+                  <p><i>*multiplier bonuses from runes are also additive (e.g. 1.2x + 1.2x = 1.4x)* </i></p>
                   <div style="display: flex; margin: 2%;">
                     <div id="RuneCard" style="width: 28%;height: 25%;">
                       <label style="color: rgb(171, 0, 0);"><b>Rune of Fury</b></label>
                       <img src="Assets/RuneOfFury.png" alt="Rune of Fury">
                       <p>
-                        Damage: +15% <br> 
-                        Crit Damage: +20%
+                          Damage: 1.15x  <br> 
+                          Crit Damage: +20%
                       </p>
                     </div>
                   
-                    <label style="font-size: 100px;">+</label>
+                    <label style="font-size: 80px;">+</label>
                     
                     <div id="RuneCard"  style="width: 28%;height: 25%;">
                       <label style="color: rgb(0, 95, 178)"><b>Rune of Patience</b></label>
                       <img src="Assets/RuneOfPatience.png" alt="Rune of Patience">
                       <p>
-                        Max Mana: +20% <br>
-                        Mana Regen: +1/s
+                        Max Mana: 1.2x  <br>
+                        Mana Regen: +0.5/s
                       </p>
                     </div>
 
-                    <label style="font-size: 100px;">=</label>
+                    <label style="font-size: 80px;">=</label>
 
                     <div id="RuneCard"  style="width: 28%;height: 25%;">
-                      <label style="color: rgb(171, 0, 0);"><b>Patient Rune of Fury</b></label>
+                      <label style="color: rgb(0, 95, 178);">
+                        <b>Patient</b>
+                      </label>
+                      <label style="color: white">
+                        <b> rune of </b>
+                      </label>
+                      <label style="color: rgb(171, 0, 0);">
+                        <b>Fury</b>
+                      </label>
                       <img src="Assets/RuneOfFury.png" alt="Patient Rune of Fury">
                       <p>
-                        Damage: +15% <br> 
+                        Damage: 1.15x  <br> 
                         Crit Damage: +20% <br>
-                        Max Mana: +20% <br>
-                        Mana Regen: +1/s
+                        Max Mana: 1.2x  <br>
+                        Mana Regen: +0.5/s
+                      </p>
+                    </div>
+                  </div>
+                  <div style="display: flex; margin: 2%;">
+                    <div id="RuneCard" style="width: 28%;height: 25%;">
+                      <label style="color: rgb(141, 0, 141);"><b>Rune of Insight</b></label>
+                      <img src="Assets/RuneOfInsight.png" alt="Rune of Insight">
+                      <p>
+                        Movement Speed: 2x  <br>
+                      </p>
+                    </div>
+                  
+                    <label style="font-size: 80px;">+</label>
+                    
+                    <div id="RuneCard"  style="width: 28%;height: 25%;">
+                      <label style="color: rgb(141, 0, 141)"><b>Rune of Insight</b></label>
+                      <img src="Assets/RuneOfInsight.png" alt="Rune of Insight">
+                      <p>
+                        Movement Speed: 2x  <br>
+                      </p>
+                    </div>
+
+                    <label style="font-size: 80px;">=</label>
+
+                    <div id="RuneCard"  style="width: 28%;height: 25%;">
+                      <label style="color: rgb(141, 0, 141);">
+                        <b>Insightful</b>
+                      </label>
+                      <label style="color: white">
+                        <b> rune of </b>
+                      </label>
+                      <label style="color: rgb(141, 0, 141);">
+                        <b>Insight</b>
+                      </label>
+                      <img src="Assets/RuneOfInsight.png" alt="Insightful Rune of Insight">
+                      <p>
+                        Movement Speed: 3x  <br>
                       </p>
                     </div>
                   </div>
